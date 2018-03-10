@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <tbw.eage.stickyviewapp.ObservableScrollView
+        android:id="@+id/observableview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/firsttitle"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/color4">
+
+
+                <ImageView
+                    android:id="@id/imageview1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:src="@drawable/icon" />
+
+                <TextView
+                    android:id="@id/textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageview1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="十一月有限责任公司"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/textview1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/textview1"
+                    android:src="@drawable/carsource_resources" />
+
+                <TextView
+                    android:id="@id/textview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="主营品牌：宝马"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@id/textview3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="主营品牌：宝马、奥迪、玛莎拉蒂"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <tbw.eage.stickyviewapp.MyXListView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/firsttitle"
+                android:layout_marginTop="38.5dp"
+                android:background="@color/colorWhite" />
+
+            <LinearLayout
+                android:id="@+id/stopview"
+                android:layout_width="match_parent"
+                android:layout_height="38.5dp"
+                android:layout_below="@id/firsttitle"
+                android:background="@color/colorTransparent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/scendview"
+                android:layout_width="match_parent"
+                android:layout_height="38.5dp"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cardealer_main_selector_1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="历史寻车" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/cardealer_main_selector_2"
+                    android:gravity="center"
+                    android:text="历史车源" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cardealer_main_selector_2"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="联系我们" />
+            </RadioGroup>
+        </RelativeLayout>
+    </tbw.eage.stickyviewapp.ObservableScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/common_leftImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/common_back" />
+
+        <TextView
+            android:id="@+id/common_centerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Siy"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/common_rightImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/common_share" />
+    </RelativeLayout>
+</FrameLayout>
